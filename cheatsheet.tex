@@ -25,6 +25,12 @@
 \raggedright{}
 % \RaggedRight{}
 
+
+% % Automatic column spacing. Warns when `twocolumn` is used in the
+% % `documentclass` declaration.
+% \usepackage{multicol}
+% \setlength{\multicolsep}{0pt}
+
 % Disable hyphenation. If we need to use babel, we should find an alterative to
 % the anti-hypenation approach below.
 \usepackage[none]{hyphenat}
@@ -93,6 +99,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Explore}%{{{
 
+% Draw Extra {{{ ---------------------------------------------------------------
 \begin{minipage}[t]{\calc{1/3}\columnwidth}
 \subsection*{Draw Extra}
 % Set figures to have 0 horizontal spacing
@@ -112,6 +119,8 @@ Draw 1/2 cards to select from.
 \textit{Powers don't alter the number of cards player keeps.}
 
 \end{minipage}
+% Draw Extra }}} ---------------------------------------------------------------
+% Keep Extra {{{ -------------------------------------------------------------
 \begin{minipage}[t]{0.3\columnwidth}
 \subsection*{Keep Extra}
 % Set figures to have 0 horizontal spacing
@@ -120,13 +129,15 @@ Draw 1/2 cards to select from.
 % Set figures to have 0 vertical spacing above and below
 \setlength{\intextsep}{0pt}%
 
-\begin{wrapfigure}{l}{0.145\columnwidth}
+\begin{wrapfigure}{l}{0.2\columnwidth}
     \includesvg{./svg/phases/explore/keep-extra/keep-1-extra}
 \end{wrapfigure}
 
 Keep 1 more card.
 
 \end{minipage}
+% Keep Extra }}} -------------------------------------------------------------
+% Draw & Keep Extra {{{ --------------------------------------------------------
 \begin{minipage}[t]{\calc{1/3}\columnwidth}
 \subsection*{\raggedright{}Draw \& Keep Extra}
 % Set figures to have 0 horizontal spacing
@@ -134,21 +145,78 @@ Keep 1 more card.
 % Set figures to have 0 vertical spacing above and below
 \setlength{\intextsep}{0pt}%
 
-\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+\begin{wrapfigure}{l}{0.2\columnwidth}
     \includesvg{./svg/phases/explore/draw-and-keep-extra/draw-2-keep-1-extra}
 \end{wrapfigure}
 
 Draw 2 more cards to select from; keep 1 more card.
 
 \end{minipage}
-
-
-
-
+% Draw & Keep Extra }}} --------------------------------------------------------
 
 %}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Develop}%{{{
+
+% Draw Before {{{ --------------------------------------------------------------
+\begin{minipage}[t]{\calc{1/3}\columnwidth}
+\subsection*{Draw Before}
+% Set figures to have 0 horizontal spacing
+% \setlength{\columnsep}{0pt}%
+
+% Set figures to have 0 vertical spacing above and below
+\setlength{\intextsep}{0pt}%
+
+\begin{wrapfigure}{l}{0.2\columnwidth}
+    \includesvg{./svg/phases/develop/draw/draw-1-before-develop}
+\end{wrapfigure}
+
+Draw 1 cart at the \underline{beginning} of this phase.
+\medbreak{}
+\textit{Player will still gain the benefit even if they do not place.}
+
+\end{minipage}
+% Draw Before }}} --------------------------------------------------------------
+% Reduce Cost {{{ --------------------------------------------------------------
+\begin{minipage}[t]{0.3\columnwidth}
+\subsection*{Reduce Cost}
+% \justifying
+% Set figures to have 0 horizontal spacing
+% \setlength{\columnsep}{0pt}%
+
+% Set figures to have 0 vertical spacing above and below
+\setlength{\intextsep}{0pt}%
+
+\begin{wrapfigure}{l}{0.2\columnwidth}
+    \includesvg{./svg/phases/develop/reduce-cost/reduce-cost-by-1}
+
+    \includesvg{./svg/phases/develop/reduce-cost/reduce-cost-by-2}
+\end{wrapfigure}
+
+Reduce development placement cost by 1/2 cards.
+
+\end{minipage}
+% Reduce Cost }}} --------------------------------------------------------------
+% Draw After {{{ ---------------------------------------------------------------
+\begin{minipage}[t]{\calc{1/3}\columnwidth}
+\subsection*{\raggedright{}Draw After}
+% Set figures to have 0 horizontal spacing
+
+% Set figures to have 0 vertical spacing above and below
+\setlength{\intextsep}{0pt}%
+
+\begin{wrapfigure}{l}{0.2\columnwidth}
+    \includesvg{./svg/phases/develop/draw-after/draw-1-after-develop}
+\end{wrapfigure}
+
+Draw 1 card after placing a development.
+
+\medbreak{}
+\textit{Player must place developement to draw.}
+
+\end{minipage}
+% Draw After }}} ---------------------------------------------------------------
+
 %}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Settle}%{{{
