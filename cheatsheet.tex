@@ -1,0 +1,163 @@
+% \documentclass[letterpaper,landscape,twocolumn,5pt]{article}
+% extarticle comes from `extsizes` package
+\documentclass[letterpaper,landscape,twocolumn,8pt]{extarticle}
+% Remove Page Numbers
+\pagestyle{empty}
+% no need for *.aux file nor section indexing nor any other files
+\nofiles{}
+
+%-------------------------------------------------------------------------------
+% Calculate numbers using LaTeX3
+%
+% The LaTeX3 syntax above makes \calc an new control sequence (or macro) that is
+% equivalent to \fp_eval:n - a floating point function that evaluates it's
+% argument using the regular programming arithmetic (like +, -, *, /, ^, ...)
+% taking a single argument.
+\usepackage{xparse}
+\ExplSyntaxOn
+\cs_new_eq:NN \calc \fp_eval:n
+\ExplSyntaxOff
+%-------------------------------------------------------------------------------
+
+\usepackage{ragged2e}
+
+\raggedbottom{}
+\raggedright{}
+% \RaggedRight{}
+
+% Disable hyphenation. If we need to use babel, we should find an alterative to
+% the anti-hypenation approach below.
+\usepackage[none]{hyphenat}
+
+% Allow having text wrap around an image
+\usepackage{wrapfig}
+% \usepackage[demo]{graphicx}
+
+% Table formatting
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{multirow}
+
+% Allow putting svg images inline with the same height as a particular character (normally `B`)
+\usepackage{scalerel}
+
+% Check if using pdftex or xetex
+\usepackage{ifpdf, ifxetex}
+
+% Text Color package
+\usepackage[svgnames]{xcolor}
+
+% Enable correct encoding
+\ifpdf{}
+    \usepackage[utf8]{inputenc}
+\fi{}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumitem}
+\setlist{topsep=0pt}
+\setlist{parsep=0pt}
+
+% Section Format Settings
+\usepackage{titlesec}
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat{\section}{\vspace{-2ex}\scshape\bfseries\raggedright\Large}{\thesection}{10pt}{}
+[\color{black}\titlerule\vspace{-0.5ex}]
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+
+\usepackage[margin=\calc{1/3}in]{geometry}
+\setlength{\tabcolsep}{0in}
+\setlength{\headheight}{0in}
+
+% Hyperlink Settings (Note: It should be near the bottom as indicated by
+% documentation)
+\ifpdf
+    \usepackage[pdftex]{hyperref}
+\else\ifxetex
+    \usepackage[xetex]{hyperref}
+\fi\fi
+\hypersetup{hidelinks}
+
+% Include svg images via `\includesvg`
+\usepackage{svg}
+
+% Use Roman numerals for our sections
+
+
+%-----------------------------------------------------------
+%Custom commands and definitions
+
+\newcommand{\inline}[1]{\scalerel*{#1}{M}}
+
+
+\begin{document} % {{{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Explore}%{{{
+
+\begin{minipage}[t]{\calc{1/3}\columnwidth}
+\subsection*{Draw Extra}
+% Set figures to have 0 horizontal spacing
+% \setlength{\columnsep}{0pt}%
+
+% Set figures to have 0 vertical spacing above and below
+\setlength{\intextsep}{0pt}%
+
+\begin{wrapfigure}{l}{0.2\columnwidth}
+    \includesvg{./svg/phases/explore/draw-extra/draw_1_extra}
+    \smallbreak{}
+    \includesvg{./svg/phases/explore/draw-extra/draw_2_extra}
+\end{wrapfigure}
+
+Draw 1/2 cards to select from.
+\smallbreak{}
+\textit{Powers don't alter the number of cards player keeps.}
+
+\end{minipage}
+\begin{minipage}[t]{0.3\columnwidth}
+\subsection*{Keep Extra}
+% Set figures to have 0 horizontal spacing
+% \setlength{\columnsep}{0pt}%
+
+% Set figures to have 0 vertical spacing above and below
+\setlength{\intextsep}{0pt}%
+
+\begin{wrapfigure}{l}{0.145\columnwidth}
+    \includesvg{./svg/phases/explore/keep-extra/keep-1-extra}
+\end{wrapfigure}
+
+Keep 1 more card.
+
+\end{minipage}
+\begin{minipage}[t]{\calc{1/3}\columnwidth}
+\subsection*{\raggedright{}Draw \& Keep Extra}
+% Set figures to have 0 horizontal spacing
+
+% Set figures to have 0 vertical spacing above and below
+\setlength{\intextsep}{0pt}%
+
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg{./svg/phases/explore/draw-and-keep-extra/draw-2-keep-1-extra}
+\end{wrapfigure}
+
+Draw 2 more cards to select from; keep 1 more card.
+
+\end{minipage}
+
+
+
+
+
+%}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Develop}%{{{
+%}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Settle}%{{{
+%}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Consume}%{{{
+%}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Produce}%{{{
+%}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document} % }}}
