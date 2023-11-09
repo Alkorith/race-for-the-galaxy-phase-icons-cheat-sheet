@@ -66,7 +66,7 @@
 % Section Format Settings
 \usepackage{titlesec}
 \renewcommand{\thesection}{\Roman{section}}
-\titleformat{\section}{\vspace{-2ex}\scshape\bfseries\raggedright\Large}{\thesection}{10pt}{}
+\titleformat{\section}{\vspace{-2ex}\scshape\bfseries\raggedright\Large}{\thesection}{0.5em}{}
 [\color{black}\titlerule\vspace{-0.5ex}]
 \titlespacing*{\subsection}{0pt}{0pt}{0pt}
 
@@ -220,6 +220,146 @@ Draw 1 card after placing a development.
 %}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Settle}%{{{
+
+% Column 1 {{{ -----------------------------------------------------------------
+\begin{minipage}[t]{0.31\columnwidth}
+\RaggedRight{}
+\subsection*{Reduce Cost}
+% Set figures to have 0 horizontal spacing
+% \setlength{\columnsep}{0pt}%
+% Set figures to have 0 vertical spacing above and below
+\setlength{\intextsep}{0pt}%
+
+% Reduce Cost {{{
+\begin{wrapfigure}{l}{0.2\columnwidth}
+    \includesvg{./svg/phases/settle/reduce-cost/reduce-2-for-settling-non-military-worlds}
+\end{wrapfigure}
+
+-2 cost to place non-military world
+(\inline{\includesvg{./svg/general/any-non-military-world}}).
+% Reduce Cost }}}
+% Military {{{
+\subsection*{Military}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg{./svg/phases/settle/military/add-1-military.svg}
+    \includesvg{./svg/phases/settle/military/subtract-1-military.svg}
+\end{wrapfigure}
+
+Contribute towards conquering military world
+(\inline{\includesvg{./svg/general/military-world.svg}}). More military means
+easier time conquering.
+\smallbreak{}
+\textit{-1 is not optional.}
+% % Military }}}
+% Specific Military/Reduce Cost {{{
+% \resizebox{\columnwidth}{!}{\subsection*{Specific Military/Reduce Cost}}
+\subsection*{Specific Military/Reduce Cost}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg{./svg/phases/settle/reduce-cost-or-gain-military/reduce-settle-cost-by-1-or-gain-1-military-for-alien-worlds.svg}
+    \includesvg{./svg/phases/settle/reduce-cost-or-gain-military/reduce-settle-cost-by-1-or-gain-1-military-for-rare-elements-worlds.svg}
+\end{wrapfigure}
+
+Based on the good type (\inline{\includesvg{./svg/general/novelty-good.svg}}~
+\inline{\includesvg{./svg/general/genes-good.svg}}~
+\inline{\includesvg{./svg/general/rare-elements-good.svg}}~
+\inline{\includesvg{./svg/general/alien-technology-good.svg}}), either reduce
+the cost to place non-military world or add Military for that world type.
+% Specific Reduce Cost/Military }}}
+
+\end{minipage}
+% Column 1 }}} -----------------------------------------------------------------
+% Column 2 {{{ -----------------------------------------------------------------
+\begin{minipage}[t]{\calc{1/3}\columnwidth}
+\RaggedRight{}
+% Set figures to have 0 horizontal spacing
+% \setlength{\columnsep}{0pt}%
+% Set figures to have 0 vertical spacing above and below
+\setlength{\intextsep}{0pt}%
+
+% Specific Reduce Cost {{{
+\subsection*{Specific Reduce Cost}
+\begin{wrapfigure}{l}{0.2\columnwidth}
+    \includesvg{./svg/phases/settle/specific-reduce-cost/reduce-1-for-settling-non-military-rare-elements-production-worlds}
+\end{wrapfigure}
+
+-1 cost to place non-military rare elements production/windfall world
+\smallbreak{}
+(\inline{\includesvg{./svg/general/rare-elements-non-military-production-world}}
+\inline{\includesvg{./svg/general/rare-elements-non-military-windfall-world}}).
+% Specific Reduce Cost }}}
+% Specific Military {{{
+\subsection*{Specific Military}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg{./svg/phases/settle/specific-military/add-4-military-for-rebel-military-worlds.svg}
+\end{wrapfigure}
+
++4 military towards conquering only \underline{rebel} military Worlds
+(\inline{\includesvg{./svg/general/rebel-military-world.svg}}).
+% Specific Military }}}
+% Temporary Military {{{
+\subsection*{Temporary Military}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg{./svg/phases/settle/temporary-military/discard-from-tableau-for-military.svg}
+\end{wrapfigure}
+
+Player \underline{may discard} this card from their tableau for +3 military for \underline{this Settle phase only}.
+% % Military }}}
+% Draw After {{{
+\subsection*{Draw After}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg{./svg/phases/settle/draw-after-settle/draw-after-settle.svg}
+\end{wrapfigure}
+
+Draw 1 card after placing a world.
+% Draw After }}}
+
+\end{minipage}
+% Column 2 }}} -----------------------------------------------------------------
+% Column 3 {{{ -----------------------------------------------------------------
+\begin{minipage}[t]{\calc{1/3}\columnwidth}
+% Set figures to have 0 horizontal spacing
+% \setlength{\columnsep}{0pt}%
+% Set figures to have 0 vertical spacing above and below
+\setlength{\intextsep}{0pt}%
+
+% Reduce Cost to 0 {{{
+\subsection*{Reduce Cost to 0}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg{./svg/phases/settle/reduce-cost-to-0/discard-to-reduce-settle-cost-for-non-military-non-alien-worlds-to-0}
+\end{wrapfigure}
+
+Player \underline{may discard} this card from tableau to place non-military
+world for free.
+\smallbreak{}
+\textit{Cannot be used for Alien Production/Windfall Worlds}
+(\inline{\includesvg{./svg/general/alien-production-world.svg}}
+\inline{\includesvg{./svg/general/alien-windfall-world.svg}}). \textit{Can use to place} Alien Rosetta Stone World.
+% Reduce Cost to 0 }}}
+% Pay for Military {{{
+\subsection*{Pay for Military}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg{./svg/phases/settle/pay-for-military/pay-to-place-military-instead-of-checking-military-power}
+\end{wrapfigure}
+
+For the \underline{Settle} action, player may place a military world
+(\inline{\includesvg{./svg/general/military-world.svg}}) like a non-military
+world (\inline{\includesvg{./svg/general/any-non-military-world.svg}}) by paying
+using cards from hand rather than checking military power.
+
+\smallbreak{}
+
+\textit{Cannot be used for Alien Production/Windfall Worlds}
+(\inline{\includesvg{./svg/general/alien-production-world.svg}}
+\inline{\includesvg{./svg/general/alien-windfall-world.svg}}) \textit{nor
+combined with other pay-for-military powers}.
+% Pay for Military }}}
+
+\end{minipage}
+% Column 3 }}} -----------------------------------------------------------------
+
+%}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\$\enspace{}Trade}%{{{
 %}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Consume}%{{{
