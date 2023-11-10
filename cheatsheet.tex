@@ -108,10 +108,10 @@
 % Set figures to have 0 vertical spacing above and below
 \setlength{\intextsep}{0pt}%
 
-\begin{wrapfigure}{l}{0.2\columnwidth}
-    \includesvg{./svg/phases/explore/draw-extra/draw_1_extra}
+\begin{wrapfigure}{l}{0.25\columnwidth}
+    \includesvg[width=0.25\columnwidth]{./svg/phases/explore/draw-extra/draw_1_extra}
     \smallbreak{}
-    \includesvg{./svg/phases/explore/draw-extra/draw_2_extra}
+    \includesvg[width=0.25\columnwidth]{./svg/phases/explore/draw-extra/draw_2_extra}
 \end{wrapfigure}
 
 Draw 1/2 cards to select from.
@@ -130,7 +130,7 @@ Draw 1/2 cards to select from.
 \setlength{\intextsep}{0pt}%
 
 \begin{wrapfigure}{l}{0.2\columnwidth}
-    \includesvg{./svg/phases/explore/keep-extra/keep-1-extra}
+    \includesvg[width=0.2\columnwidth]{./svg/phases/explore/keep-extra/keep-1-extra}
 \end{wrapfigure}
 
 Keep 1 more card.
@@ -145,8 +145,8 @@ Keep 1 more card.
 % Set figures to have 0 vertical spacing above and below
 \setlength{\intextsep}{0pt}%
 
-\begin{wrapfigure}{l}{0.2\columnwidth}
-    \includesvg{./svg/phases/explore/draw-and-keep-extra/draw-2-keep-1-extra}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/explore/draw-and-keep-extra/draw-2-keep-1-extra}
 \end{wrapfigure}
 
 Draw 2 more cards to select from; keep 1 more card.
@@ -168,7 +168,7 @@ Draw 2 more cards to select from; keep 1 more card.
 \setlength{\intextsep}{0pt}%
 
 \begin{wrapfigure}{l}{0.2\columnwidth}
-    \includesvg{./svg/phases/develop/draw/draw-1-before-develop}
+    \includesvg[width=0.2\columnwidth]{./svg/phases/develop/draw/draw-1-before-develop}
 \end{wrapfigure}
 
 Draw 1 cart at the \underline{beginning} of this phase.
@@ -188,9 +188,9 @@ Draw 1 cart at the \underline{beginning} of this phase.
 \setlength{\intextsep}{0pt}%
 
 \begin{wrapfigure}{l}{0.2\columnwidth}
-    \includesvg{./svg/phases/develop/reduce-cost/reduce-cost-by-1}
+    \includesvg[width=0.2\columnwidth]{./svg/phases/develop/reduce-cost/reduce-cost-by-1}
 
-    \includesvg{./svg/phases/develop/reduce-cost/reduce-cost-by-2}
+    \includesvg[width=0.2\columnwidth]{./svg/phases/develop/reduce-cost/reduce-cost-by-2}
 \end{wrapfigure}
 
 Reduce development placement cost by 1/2 cards.
@@ -205,8 +205,8 @@ Reduce development placement cost by 1/2 cards.
 % Set figures to have 0 vertical spacing above and below
 \setlength{\intextsep}{0pt}%
 
-\begin{wrapfigure}{l}{0.2\columnwidth}
-    \includesvg{./svg/phases/develop/draw-after/draw-1-after-develop}
+\begin{wrapfigure}{l}{0.25\columnwidth}
+    \includesvg[width=0.25\columnwidth]{./svg/phases/develop/draw-after/draw-1-after-develop}
 \end{wrapfigure}
 
 Draw 1 card after placing a development.
@@ -231,8 +231,8 @@ Draw 1 card after placing a development.
 \setlength{\intextsep}{0pt}%
 
 % Reduce Cost {{{
-\begin{wrapfigure}{l}{0.2\columnwidth}
-    \includesvg{./svg/phases/settle/reduce-cost/reduce-2-for-settling-non-military-worlds}
+\begin{wrapfigure}{l}{\calc{20/93}\columnwidth}
+    \includesvg[width=\calc{20/93}\columnwidth]{./svg/phases/settle/reduce-cost/reduce-2-for-settling-non-military-worlds}
 \end{wrapfigure}
 
 -2 cost to place non-military world
@@ -240,9 +240,9 @@ Draw 1 card after placing a development.
 % Reduce Cost }}}
 % Military {{{
 \subsection*{Military}
-\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
-    \includesvg{./svg/phases/settle/military/add-1-military.svg}
-    \includesvg{./svg/phases/settle/military/subtract-1-military.svg}
+\begin{wrapfigure}{l}{\calc{20/93}\columnwidth}
+    \includesvg[width=\calc{20/93}\columnwidth]{./svg/phases/settle/military/add-1-military.svg}
+    \includesvg[width=\calc{20/93}\columnwidth]{./svg/phases/settle/military/subtract-1-military.svg}
 \end{wrapfigure}
 
 Contribute towards conquering military world
@@ -252,18 +252,19 @@ easier time conquering.
 \textit{-1 is not optional.}
 % % Military }}}
 % Specific Military/Reduce Cost {{{
-\resizebox{\columnwidth}{!}{\subsection*{Specific Military/Reduce Cost}}
+\subsection*{Specific Military/Reduce Cost}
 
 % \subsection*{Specific Military/Reduce Cost}
 \begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
-    \includesvg{./svg/phases/settle/reduce-cost-or-gain-military/reduce-settle-cost-by-1-or-gain-1-military-for-alien-worlds.svg}
-    \includesvg{./svg/phases/settle/reduce-cost-or-gain-military/reduce-settle-cost-by-1-or-gain-1-military-for-rare-elements-worlds.svg}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/settle/reduce-cost-or-gain-military/reduce-settle-cost-by-1-or-gain-1-military-for-alien-worlds.svg}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/settle/reduce-cost-or-gain-military/reduce-settle-cost-by-1-or-gain-1-military-for-rare-elements-worlds.svg}
 \end{wrapfigure}
 
-Based on the good type (\inline{\includesvg{./svg/general/novelty-good.svg}}~
-\inline{\includesvg{./svg/general/genes-good.svg}}~
-\inline{\includesvg{./svg/general/rare-elements-good.svg}}~
-\inline{\includesvg{./svg/general/alien-technology-good.svg}}), either reduce
+Based on the good type
+\mbox{(\inline{\includesvg{./svg/general/novelty-good.svg}}
+\inline{\includesvg{./svg/general/genes-good.svg}}
+\inline{\includesvg{./svg/general/rare-elements-good.svg}}
+\inline{\includesvg{./svg/general/alien-technology-good.svg}})}, either reduce
 the cost to place non-military world or add Military for that world type.
 % Specific Reduce Cost/Military }}}
 
@@ -280,7 +281,7 @@ the cost to place non-military world or add Military for that world type.
 % Specific Reduce Cost {{{
 \subsection*{Specific Reduce Cost}
 \begin{wrapfigure}{l}{0.2\columnwidth}
-    \includesvg{./svg/phases/settle/specific-reduce-cost/reduce-1-for-settling-non-military-rare-elements-production-worlds}
+    \includesvg[width=0.2\columnwidth]{./svg/phases/settle/specific-reduce-cost/reduce-1-for-settling-non-military-rare-elements-production-worlds}
 \end{wrapfigure}
 
 -1 cost to place non-military rare elements production/windfall world
@@ -290,8 +291,9 @@ the cost to place non-military world or add Military for that world type.
 % Specific Reduce Cost }}}
 % Specific Military {{{
 \subsection*{Specific Military}
-\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
-    \includesvg{./svg/phases/settle/specific-military/add-4-military-for-rebel-military-worlds.svg}
+\begin{wrapfigure}{l}{0.2\columnwidth}
+    \includesvg[width=0.2\columnwidth]{./svg/phases/settle/specific-military/add-4-military-for-rebel-military-worlds.svg}
+
 \end{wrapfigure}
 
 +4 military towards conquering only \underline{rebel} military Worlds
@@ -300,15 +302,16 @@ the cost to place non-military world or add Military for that world type.
 % Temporary Military {{{
 \subsection*{Temporary Military}
 \begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
-    \includesvg{./svg/phases/settle/temporary-military/discard-from-tableau-for-military.svg}
+    \includesvg[height=0.2\columnwidth]{./svg/phases/settle/temporary-military/discard-from-tableau-for-military.svg}
 \end{wrapfigure}
 
-Player \underline{may discard} this card from their tableau for +3 military for \underline{this Settle phase only}.
+Player \underline{may discard} this card from their tableau for +3 military for
+\underline{this \textbf{Settle} phase only}.
 % % Military }}}
 % Draw After {{{
 \subsection*{Draw After}
-\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
-    \includesvg{./svg/phases/settle/draw-after-settle/draw-after-settle.svg}
+\begin{wrapfigure}{l}{0.2\columnwidth}
+    \includesvg[height=0.2\columnwidth]{./svg/phases/settle/draw-after-settle/draw-after-settle.svg}
 \end{wrapfigure}
 
 Draw 1 card after placing a world.
@@ -326,7 +329,7 @@ Draw 1 card after placing a world.
 % Reduce Cost to 0 {{{
 \subsection*{Reduce Cost to 0}
 \begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
-    \includesvg{./svg/phases/settle/reduce-cost-to-0/discard-to-reduce-settle-cost-for-non-military-non-alien-worlds-to-0}
+    \includesvg[height=0.2\columnwidth]{./svg/phases/settle/reduce-cost-to-0/discard-to-reduce-settle-cost-for-non-military-non-alien-worlds-to-0}
 \end{wrapfigure}
 
 Player \underline{may discard} this card from tableau to place non-military
@@ -339,10 +342,10 @@ world for free.
 % Pay for Military {{{
 \subsection*{Pay for Military}
 \begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
-    \includesvg{./svg/phases/settle/pay-for-military/pay-to-place-military-instead-of-checking-military-power}
+    \includesvg[height=0.2\columnwidth]{./svg/phases/settle/pay-for-military/pay-to-place-military-instead-of-checking-military-power}
 \end{wrapfigure}
 
-For the \underline{Settle} action, player may place a military world
+For the \textbf{Settle} action, player may place a military world
 (\inline{\includesvg{./svg/general/military-world.svg}}) like a non-military
 world (\inline{\includesvg{./svg/general/any-non-military-world.svg}}) by paying
 using cards from hand rather than checking military power.
@@ -371,9 +374,9 @@ combined with other pay-for-military powers}.
 % Set figures to have 0 vertical spacing above and below
 \setlength{\intextsep}{0pt}%
 
-\begin{wrapfigure}{l}{0.2\columnwidth}
-    \includesvg{./svg/phases/trade/any-good/draw-1-extra-after-selling-any-good.svg}
-    \includesvg{./svg/phases/trade/any-good/draw-2-extra-after-selling-any-good.svg}
+\begin{wrapfigure}{l}{\calc{20/93}\columnwidth}
+    \includesvg[width=\calc{20/93}\columnwidth]{./svg/phases/trade/any-good/draw-1-extra-after-selling-any-good.svg}
+    \includesvg[width=\calc{20/93}\columnwidth]{./svg/phases/trade/any-good/draw-2-extra-after-selling-any-good.svg}
 \end{wrapfigure}
 
 Draw 1/2 more goods when selling any good.
@@ -381,8 +384,7 @@ Draw 1/2 more goods when selling any good.
 % Any Good }}} -----------------------------------------------------------------
 % Draw Extra for Specific Good {{{ ---------------------------------------------
 \begin{minipage}[t]{\calc{1/3}\columnwidth}
-% \subsection*{Draw Extra for Specific Good}
-\resizebox{\columnwidth}{!}{\subsection*{Specific Good Draw Extra}}
+\subsection*{Specific Good Draw Extra}
 % Set figures to have 0 horizontal spacing
 % \setlength{\columnsep}{0pt}%
 
@@ -399,10 +401,12 @@ Draw 1/2 more goods when selling any good.
     \includesvg{./svg/phases/trade/specific-kind-of-good/draw-1-extra-after-selling-genes-good.svg}
     \includesvg{./svg/phases/trade/specific-kind-of-good/draw-2-extra-after-selling-genes-good.svg}
 \end{wrapfigure}
-When trading the indicated good (\inline{\includesvg{./svg/general/novelty-good.svg}}~
-\inline{\includesvg{./svg/general/genes-good.svg}}~
-\inline{\includesvg{./svg/general/rare-elements-good.svg}}~
-\inline{\includesvg{./svg/general/alien-technology-good.svg}}), draw 1/2/3 extra cards.
+When trading the indicated good
+\mbox{(\inline{\includesvg{./svg/general/novelty-good.svg}}
+\inline{\includesvg{./svg/general/genes-good.svg}}
+\inline{\includesvg{./svg/general/rare-elements-good.svg}}
+\inline{\includesvg{./svg/general/alien-technology-good.svg}})}, draw 1/2/3
+extra cards.
 \end{minipage}
 % Draw Extra for Specific Good }}} ---------------------------------------------
 % This World's Goods {{{ -------------------------------------------------------
@@ -415,19 +419,175 @@ When trading the indicated good (\inline{\includesvg{./svg/general/novelty-good.
 \setlength{\intextsep}{0pt}%
 
 \begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
-    \includesvg{./svg/phases/trade/this-world-good/1-extra-card-when-selling-good-from-this-world.svg}
-    \includesvg{./svg/phases/trade/this-world-good/3-extra-card-when-selling-good-from-this-world.svg}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/trade/this-world-good/1-extra-card-when-selling-good-from-this-world.svg}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/trade/this-world-good/3-extra-card-when-selling-good-from-this-world.svg}
 \end{wrapfigure}
 
 When trading a good from this world
 (\inline{\includesvg{./svg/general/this-world-indicator.svg}}), Draw 1/3 more
-cards plus any other applicable \underline{Trade} powers.
+cards plus any other applicable \textbf{Trade} powers.
 \end{minipage}
 % This World's Goods }}} -------------------------------------------------------
 
 %}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Consume}%{{{
+
+% Column 1 {{{ -----------------------------------------------------------------
+\begin{minipage}[t]{0.31\columnwidth}
+\setlength{\intextsep}{0pt}%
+
+
+% Set figures to have 0 horizontal spacing
+% \setlength{\columnsep}{0pt}%
+
+% Any 1 Good {{{
+\subsection*{Any 1 Good}
+\begin{wrapfigure}{l}{0.5\columnwidth}
+    \includesvg[height=0.15\columnwidth]{./svg/phases/consume/any-1-good/discard-for-1-victory-point}~\includesvg[height=0.15\columnwidth]{./svg/phases/consume/any-1-good/discard-to-draw-1-card}
+    \smallbreak{}
+    \includesvg[height=0.15\columnwidth]{./svg/phases/consume/any-1-good/discard-for-2-victory-points}~\includesvg[height=0.15\columnwidth]{./svg/phases/consume/any-1-good/discard-to-draw-2-cards}
+    \smallbreak{}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/consume/any-1-good/discard-for-1-victory-point-and-draw-1-card}
+\end{wrapfigure}
+
+Discard any 1 good to gain victory points (VP) and/or draw cards.
+\hfill{}\\
+% Any 1 Good }}}
+% Discard Cards, Not Goods {{{
+\subsection*{\RaggedRight{}Discard Cards, Not Goods}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/consume/discard-cards-not-goods/with-max-2-iterations-you-may-discard-1-card-in-hand-for-1-victory-point.svg}
+\end{wrapfigure}
+
+You \underline{may} discard up to 2 cards in hand. For each discarded card, gain
+1 VP.
+\smallbreak{}
+\textit{"Consume: 2x VPs" bonus action does not affect this power. This Power is
+optional. Player does not need to fully use it.}
+% Discard Cards, Not Goods }}}
+% All Goods {{{
+\subsection*{All Goods}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg[height=0.15\columnwidth]{./svg/phases/consume/all-goods/discard-all-goods-to-get-1-less-than-the-amount-discarded.svg}
+\end{wrapfigure}
+
+Discard $N$ goods in tableau to gain \mbox{$N-1$} VPs.
+\smallbreak{}
+\textit{The player may use other consume powers before triggering this one.}
+% All Goods }}}
+% Draw {{{
+\subsection*{\RaggedRight{}Draw}
+\begin{wrapfigure}{l}{0.2\columnwidth}
+    \includesvg[width=0.2\columnwidth]{./svg/phases/consume/draw/draw-card.svg}
+\end{wrapfigure}
+
+Draw 1 card.
+% Draw }}}
+
+\end{minipage}
+% Column 1 }}} -----------------------------------------------------------------
+% Column 2 {{{ -----------------------------------------------------------------
+\begin{minipage}[t]{\calc{1/3}\columnwidth}
+\setlength{\intextsep}{0pt}%
+
+% Fixed Number of Goods {{{
+\subsection*{Fixed Number of Goods}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/consume/fixed-number-of-goods/discard-any-2-goods-for-3-victory-points.svg}
+\end{wrapfigure}
+
+Discard any 2 goods to gain 3 VPs.
+
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/consume/fixed-number-of-goods/discard-3-different-goods-for-3-victory-points.svg}
+\end{wrapfigure}
+
+Discard 3 different types of goods
+\mbox{(\inline{\includesvg{./svg/general/novelty-good.svg}}
+\inline{\includesvg{./svg/general/genes-good.svg}}
+\inline{\includesvg{./svg/general/rare-elements-good.svg}}
+\inline{\includesvg{./svg/general/alien-technology-good.svg}})} to gain 3 VPs.
+% Fixed Number of Goods }}}
+% Specific Kinds of Good(s) {{{
+\subsection*{\RaggedRight{}Specific Kinds of Good(s)}
+\includesvg[height=0.15\columnwidth]{./svg/phases/consume/specific-kind-of-goods/discard-novelty-good-to-draw-1-card.svg}
+\includesvg[height=0.15\columnwidth]{./svg/phases/consume/specific-kind-of-goods/discard-gene-good-to-draw-gain-1-victory-point.svg}
+
+\includesvg[height=0.15\columnwidth]{./svg/phases/consume/specific-kind-of-goods/discard-1-rare-element-good-to-gain-1-victory-point-and-draw-1-card.svg}
+\includesvg[height=0.15\columnwidth]{./svg/phases/consume/specific-kind-of-goods/discard-2-rare-elements-goods-to-gain-3-victory-points.svg}
+
+Discard the specific good type and amount to gain VP, draw cards, or both.
+% Specific Kinds of Good(s) }}}
+% Discarding "Up To" {{{
+\subsection*{Discarding "Up To"}
+\includesvg[height=0.15\columnwidth]{./svg/phases/consume/discarding-up-to/with-max-2-iterations-for-each-discarded-good-gain-1-victory-point.svg}
+\includesvg[height=0.15\columnwidth]{./svg/phases/consume/discarding-up-to/with-max-2-iterations-for-each-rare-elemnt-good-gain-1-victory-point.svg}
+
+\includesvg[height=0.15\columnwidth]{./svg/phases/consume/discarding-up-to/with-max-3-iterations-for-each-novelty-good-gain-1-victory-point.svg}
+\includesvg[height=0.15\columnwidth]{./svg/phases/consume/discarding-up-to/with-max-3-iterations-for-each-novelty-good-gain-1-victory-point-and-draw-1-card.svg}
+
+Discard up to the indicated number of goods in the arrow. For each discarded
+good, gain the specified VPs, cards, or both.
+\smallbreak{}
+\textit{The player may use other consume powers before this one. Once the player
+invokes this power, they must use the power to the fullest extent possible}.
+% Discarding "Up To" }}}
+
+\end{minipage}
+% Column 2 }}} -----------------------------------------------------------------
+% Column 3 {{{ -----------------------------------------------------------------
+\begin{minipage}[t]{\calc{1/3}\columnwidth}
+\setlength{\intextsep}{0pt}%
+
+
+% Consume at Trade Prices {{{
+\subsection*{\RaggedRight{}Consume at Trade Prices}
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/consume/for-cards-at-trade-prices/without-trade-powers-discard-good-for-trade-price.svg}
+\end{wrapfigure}
+
+Discard 1 good to draw cards equal to its trade price.
+\smallbreak{}
+\textit{Do \underline{not} trigger trade powers}.
+
+
+\begin{wrapfigure}{l}{\calc{1/3}\columnwidth}
+    \includesvg[width=\calc{1/3}\columnwidth]{./svg/phases/consume/for-cards-at-trade-prices/with-trade-powers-discard-good-for-trade-price.svg}
+\end{wrapfigure}
+
+
+Discard 1 good to draw cards equal to its trade price.
+\smallbreak{}
+\textit{Do trigger trade powers}.
+
+% Consume at Trade Prices }}}
+% Draw if Lucky {{{
+\subsection*{\RaggedRight{}Draw if Lucky}
+\begin{wrapfigure}{l}{0.5\columnwidth}
+    \includesvg[width=0.5\columnwidth]{./svg/phases/consume/draw-if-lucky/draw-if-lucky.svg}
+\end{wrapfigure}
+
+Name a number from 1--7. Turn the top card from the card supply face up. If
+its cost or defense matches the number, keep it. Otherwise, discard it.
+\smallbreak{}
+\textit{No good is discarded when activating gambling power}.
+\smallbreak{}
+Gambling World
+\textit{card \underline{also} has a standard consume power in addition to this
+    one. \underline{Both}
+powers may be used in a single} \textbf{Consume} \textit{phase.}
+
+% Draw if Lucky }}}
+
+
+
+
+\end{minipage}
+% Column 3 }}} -----------------------------------------------------------------
+
 %}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Produce}%{{{
